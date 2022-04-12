@@ -16,6 +16,9 @@
 		E9ADE33827F99A940073C396 /* try1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADE33727F99A940073C396 /* try1Tests.swift */; };
 		E9ADE34227F99A940073C396 /* try1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADE34127F99A940073C396 /* try1UITests.swift */; };
 		E9ADE34427F99A940073C396 /* try1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADE34327F99A940073C396 /* try1UITestsLaunchTests.swift */; };
+		E9ADE35127F9B09B0073C396 /* 임시.png in Resources */ = {isa = PBXBuildFile; fileRef = E9ADE35027F9B09B0073C396 /* 임시.png */; };
+		E9ADE35327FF28870073C396 /* 임시_크기 수정.png in Resources */ = {isa = PBXBuildFile; fileRef = E9ADE35227FF28870073C396 /* 임시_크기 수정.png */; };
+		E9ADE35528034A950073C396 /* bubble.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E9ADE35428034A950073C396 /* bubble.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E9ADE31D27F99A910073C396 /* try1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = try1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9ADE31D27F99A910073C396 /* babble_main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babble_main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9ADE32027F99A910073C396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9ADE32227F99A910073C396 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E9ADE32427F99A910073C396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +47,14 @@
 		E9ADE32927F99A940073C396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9ADE32C27F99A940073C396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9ADE32E27F99A940073C396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9ADE33327F99A940073C396 /* try1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = try1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9ADE33327F99A940073C396 /* babble_mainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = babble_mainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9ADE33727F99A940073C396 /* try1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = try1Tests.swift; sourceTree = "<group>"; };
-		E9ADE33D27F99A940073C396 /* try1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = try1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9ADE33D27F99A940073C396 /* babble_mainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = babble_mainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9ADE34127F99A940073C396 /* try1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = try1UITests.swift; sourceTree = "<group>"; };
 		E9ADE34327F99A940073C396 /* try1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = try1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E9ADE35027F9B09B0073C396 /* 임시.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "임시.png"; path = "../../임시.png"; sourceTree = "<group>"; };
+		E9ADE35227FF28870073C396 /* 임시_크기 수정.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "임시_크기 수정.png"; path = "../../임시_크기 수정.png"; sourceTree = "<group>"; };
+		E9ADE35428034A950073C396 /* bubble.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bubble.jpeg; path = ../../bubble.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +95,9 @@
 		E9ADE31E27F99A910073C396 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9ADE31D27F99A910073C396 /* try1.app */,
-				E9ADE33327F99A940073C396 /* try1Tests.xctest */,
-				E9ADE33D27F99A940073C396 /* try1UITests.xctest */,
+				E9ADE31D27F99A910073C396 /* babble_main.app */,
+				E9ADE33327F99A940073C396 /* babble_mainTests.xctest */,
+				E9ADE33D27F99A940073C396 /* babble_mainUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +110,9 @@
 				E9ADE32427F99A910073C396 /* ViewController.swift */,
 				E9ADE32627F99A910073C396 /* Main.storyboard */,
 				E9ADE32927F99A940073C396 /* Assets.xcassets */,
+				E9ADE35428034A950073C396 /* bubble.jpeg */,
+				E9ADE35027F9B09B0073C396 /* 임시.png */,
+				E9ADE35227FF28870073C396 /* 임시_크기 수정.png */,
 				E9ADE32B27F99A940073C396 /* LaunchScreen.storyboard */,
 				E9ADE32E27F99A940073C396 /* Info.plist */,
 			);
@@ -130,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E9ADE31C27F99A910073C396 /* try1 */ = {
+		E9ADE31C27F99A910073C396 /* babble_main */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9ADE34727F99A940073C396 /* Build configuration list for PBXNativeTarget "try1" */;
+			buildConfigurationList = E9ADE34727F99A940073C396 /* Build configuration list for PBXNativeTarget "babble_main" */;
 			buildPhases = (
 				E9ADE31927F99A910073C396 /* Sources */,
 				E9ADE31A27F99A910073C396 /* Frameworks */,
@@ -142,14 +151,14 @@
 			);
 			dependencies = (
 			);
-			name = try1;
+			name = babble_main;
 			productName = try1;
-			productReference = E9ADE31D27F99A910073C396 /* try1.app */;
+			productReference = E9ADE31D27F99A910073C396 /* babble_main.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E9ADE33227F99A940073C396 /* try1Tests */ = {
+		E9ADE33227F99A940073C396 /* babble_mainTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9ADE34A27F99A940073C396 /* Build configuration list for PBXNativeTarget "try1Tests" */;
+			buildConfigurationList = E9ADE34A27F99A940073C396 /* Build configuration list for PBXNativeTarget "babble_mainTests" */;
 			buildPhases = (
 				E9ADE32F27F99A940073C396 /* Sources */,
 				E9ADE33027F99A940073C396 /* Frameworks */,
@@ -160,14 +169,14 @@
 			dependencies = (
 				E9ADE33527F99A940073C396 /* PBXTargetDependency */,
 			);
-			name = try1Tests;
+			name = babble_mainTests;
 			productName = try1Tests;
-			productReference = E9ADE33327F99A940073C396 /* try1Tests.xctest */;
+			productReference = E9ADE33327F99A940073C396 /* babble_mainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E9ADE33C27F99A940073C396 /* try1UITests */ = {
+		E9ADE33C27F99A940073C396 /* babble_mainUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9ADE34D27F99A940073C396 /* Build configuration list for PBXNativeTarget "try1UITests" */;
+			buildConfigurationList = E9ADE34D27F99A940073C396 /* Build configuration list for PBXNativeTarget "babble_mainUITests" */;
 			buildPhases = (
 				E9ADE33927F99A940073C396 /* Sources */,
 				E9ADE33A27F99A940073C396 /* Frameworks */,
@@ -178,9 +187,9 @@
 			dependencies = (
 				E9ADE33F27F99A940073C396 /* PBXTargetDependency */,
 			);
-			name = try1UITests;
+			name = babble_mainUITests;
 			productName = try1UITests;
-			productReference = E9ADE33D27F99A940073C396 /* try1UITests.xctest */;
+			productReference = E9ADE33D27F99A940073C396 /* babble_mainUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E9ADE31827F99A910073C396 /* Build configuration list for PBXProject "try1" */;
+			buildConfigurationList = E9ADE31827F99A910073C396 /* Build configuration list for PBXProject "babble_main" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +228,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9ADE31C27F99A910073C396 /* try1 */,
-				E9ADE33227F99A940073C396 /* try1Tests */,
-				E9ADE33C27F99A940073C396 /* try1UITests */,
+				E9ADE31C27F99A910073C396 /* babble_main */,
+				E9ADE33227F99A940073C396 /* babble_mainTests */,
+				E9ADE33C27F99A940073C396 /* babble_mainUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,8 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9ADE32D27F99A940073C396 /* LaunchScreen.storyboard in Resources */,
+				E9ADE35127F9B09B0073C396 /* 임시.png in Resources */,
+				E9ADE35327FF28870073C396 /* 임시_크기 수정.png in Resources */,
 				E9ADE32A27F99A940073C396 /* Assets.xcassets in Resources */,
 				E9ADE32827F99A910073C396 /* Main.storyboard in Resources */,
+				E9ADE35528034A950073C396 /* bubble.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +298,12 @@
 /* Begin PBXTargetDependency section */
 		E9ADE33527F99A940073C396 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E9ADE31C27F99A910073C396 /* try1 */;
+			target = E9ADE31C27F99A910073C396 /* babble_main */;
 			targetProxy = E9ADE33427F99A940073C396 /* PBXContainerItemProxy */;
 		};
 		E9ADE33F27F99A940073C396 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E9ADE31C27F99A910073C396 /* try1 */;
+			target = E9ADE31C27F99A910073C396 /* babble_main */;
 			targetProxy = E9ADE33E27F99A940073C396 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -454,7 +466,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -482,7 +494,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -502,7 +514,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/try1.app/try1";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/babble_main.app/babble_main";
 			};
 			name = Debug;
 		};
@@ -522,7 +534,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/try1.app/try1";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/babble_main.app/babble_main";
 			};
 			name = Release;
 		};
@@ -565,7 +577,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E9ADE31827F99A910073C396 /* Build configuration list for PBXProject "try1" */ = {
+		E9ADE31827F99A910073C396 /* Build configuration list for PBXProject "babble_main" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9ADE34527F99A940073C396 /* Debug */,
@@ -574,7 +586,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9ADE34727F99A940073C396 /* Build configuration list for PBXNativeTarget "try1" */ = {
+		E9ADE34727F99A940073C396 /* Build configuration list for PBXNativeTarget "babble_main" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9ADE34827F99A940073C396 /* Debug */,
@@ -583,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9ADE34A27F99A940073C396 /* Build configuration list for PBXNativeTarget "try1Tests" */ = {
+		E9ADE34A27F99A940073C396 /* Build configuration list for PBXNativeTarget "babble_mainTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9ADE34B27F99A940073C396 /* Debug */,
@@ -592,7 +604,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9ADE34D27F99A940073C396 /* Build configuration list for PBXNativeTarget "try1UITests" */ = {
+		E9ADE34D27F99A940073C396 /* Build configuration list for PBXNativeTarget "babble_mainUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9ADE34E27F99A940073C396 /* Debug */,
