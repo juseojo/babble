@@ -85,9 +85,9 @@
 		E9ADE31427F99A910073C396 = {
 			isa = PBXGroup;
 			children = (
-				E9ADE31F27F99A910073C396 /* try1 */,
-				E9ADE33627F99A940073C396 /* try1Tests */,
-				E9ADE34027F99A940073C396 /* try1UITests */,
+				E9ADE31F27F99A910073C396 /* babble_main */,
+				E9ADE33627F99A940073C396 /* babble_mainTests */,
+				E9ADE34027F99A940073C396 /* babble_mainUITests */,
 				E9ADE31E27F99A910073C396 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E9ADE31F27F99A910073C396 /* try1 */ = {
+		E9ADE31F27F99A910073C396 /* babble_main */ = {
 			isa = PBXGroup;
 			children = (
 				E9ADE32027F99A910073C396 /* AppDelegate.swift */,
@@ -116,24 +116,24 @@
 				E9ADE32B27F99A940073C396 /* LaunchScreen.storyboard */,
 				E9ADE32E27F99A940073C396 /* Info.plist */,
 			);
-			path = try1;
+			path = babble_main;
 			sourceTree = "<group>";
 		};
-		E9ADE33627F99A940073C396 /* try1Tests */ = {
+		E9ADE33627F99A940073C396 /* babble_mainTests */ = {
 			isa = PBXGroup;
 			children = (
 				E9ADE33727F99A940073C396 /* try1Tests.swift */,
 			);
-			path = try1Tests;
+			path = babble_mainTests;
 			sourceTree = "<group>";
 		};
-		E9ADE34027F99A940073C396 /* try1UITests */ = {
+		E9ADE34027F99A940073C396 /* babble_mainUITests */ = {
 			isa = PBXGroup;
 			children = (
 				E9ADE34127F99A940073C396 /* try1UITests.swift */,
 				E9ADE34327F99A940073C396 /* try1UITestsLaunchTests.swift */,
 			);
-			path = try1UITests;
+			path = babble_mainUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,7 +451,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95366L65VG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = try1/Info.plist;
+				INFOPLIST_FILE = babble_main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -462,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = whatsthis.try1;
+				PRODUCT_BUNDLE_IDENTIFIER = "whatsthis.babble-main";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -479,7 +479,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95366L65VG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = try1/Info.plist;
+				INFOPLIST_FILE = babble_main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -490,7 +490,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = whatsthis.try1;
+				PRODUCT_BUNDLE_IDENTIFIER = "whatsthis.babble-main";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
