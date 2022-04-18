@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     let screen_width = UIScreen.main.bounds.size.width
     let screen_height = UIScreen.main.bounds.size.height
     var btns: [UIButton] = []
+    var food_btns: [UIButton] = []
+    var choiced_btn: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,10 +58,12 @@ class ViewController: UIViewController {
             self.babble_btn_4.transform = CGAffineTransform(translationX: -400, y: 400)
         })
     }
+    
     @IBAction func btn_choice(_ sender: UIButton) {
         
         var i = 0
-        print("btn_click")
+        choiced_btn = sender
+        
         while (i < 4)
         {
             if (btns[i] != sender)
@@ -76,6 +80,9 @@ class ViewController: UIViewController {
                 let food_btn3 = UIButton()
                 let food_btn4 = UIButton()
                 
+                
+                food_btns = [food_btn1, food_btn2, food_btn3, food_btn4]
+                
                 food_btn1.frame = CGRect(x:0, y: screen_height, width: 0, height: 0)
                 food_btn2.frame = CGRect(x:0, y: screen_height, width: 0, height: 0)
                 food_btn3.frame = CGRect(x:0, y: screen_height, width: 0, height: 0)
@@ -85,6 +92,11 @@ class ViewController: UIViewController {
                 food_btn2.setBackgroundImage(UIImage(named: "bubble.jpeg"), for: .normal)
                 food_btn3.setBackgroundImage(UIImage(named: "bubble.jpeg"), for: .normal)
                 food_btn4.setBackgroundImage(UIImage(named: "bubble.jpeg"), for: .normal)
+                
+                food_btn1.addTarget(self, action: #selector(food_choice(_:)), for: .touchUpInside)
+                food_btn2.addTarget(self, action: #selector(food_choice(_:)), for: .touchUpInside)
+                food_btn3.addTarget(self, action: #selector(food_choice(_:)), for: .touchUpInside)
+                food_btn4.addTarget(self, action: #selector(food_choice(_:)), for: .touchUpInside)
                
                 self.main_view.addSubview(food_btn1)
                 self.main_view.addSubview(food_btn2)
@@ -103,6 +115,29 @@ class ViewController: UIViewController {
             
             i += 1
         }
+    }
+    
+    @objc func food_choice(_ sender: UIButton)
+    {
+        
+        UIButton.animate(withDuration: 2, animations:{
+            var i = 0
+            sender.frame = CGRect(x: 0 , y: 0, width: self.screen_width, height: self.screen_width)
+            while (i < 4)
+            {
+                if (self.food_btns[i] != sender)
+                {
+                    UIButton.animate(withDuration: 1, animations:{
+                        self.food_btns[i].isHidden = true
+                        self.food_btns[i].isEnabled = false
+                        
+                        self.choiced_btn?.isHidden = true
+                        self.choiced_btn?.isEnabled = false
+                    })
+                }
+                i += 1
+            }
+        })
     }
 }
 
