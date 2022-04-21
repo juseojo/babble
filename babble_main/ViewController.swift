@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import NMapsMap
+import Alamofire
+import SwiftyJSON
+import CoreLocation
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, CLLocationManagerDelegate {
+    
     @IBOutlet weak var img_view: UIImageView!
     @IBOutlet weak var main_view: UIView!
     
@@ -17,15 +21,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var babble_btn_3: UIButton!
     @IBOutlet weak var babble_btn_4: UIButton!
     
+    @IBOutlet weak var food_inform_view: UIView!
+    
+    @IBOutlet weak var map_view: UIView!
     let screen_width = UIScreen.main.bounds.size.width
     let screen_height = UIScreen.main.bounds.size.height
+    
+    var locationManager: CLLocationManager!
+    
     var btns: [UIButton] = []
     var food_btns: [UIButton] = []
     var choiced_btn: UIButton?
+
+    let naver_map = NMFMapView()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
         btns = [babble_btn_1,babble_btn_2,babble_btn_3,babble_btn_4]
         
@@ -41,6 +57,8 @@ class ViewController: UIViewController {
         babble_btn_1.layer.cornerRadius = babble_btn_1.frame.height / 2
         babble_btn_1.backgroundColor = UIColor.lightGray
         
+        food_inform_view.frame = CGRect(x: 0, y: screen_height, width: screen_width, height: screen_height)
+        food_inform_view.layer.cornerRadius = 20
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.click_action))
         img_view.addGestureRecognizer(gesture)
@@ -59,6 +77,7 @@ class ViewController: UIViewController {
         })
     }
     
+    //업종 선택
     @IBAction func btn_choice(_ sender: UIButton) {
         
         var i = 0
@@ -116,28 +135,104 @@ class ViewController: UIViewController {
             i += 1
         }
     }
-    
+
+    //음식 선택
     @objc func food_choice(_ sender: UIButton)
     {
+        naver_map.frame = view.frame
+        map_view.addSubview(naver_map)
+        self.locationManager.requestWhenInUseAuthorization()
         
-        UIButton.animate(withDuration: 2, animations:{
+        if CLLocationManager.locationServicesEnabled()
+        {
+            print("위치 서비스 On 상태")
+            self.locationManager.startUpdatingLocation() //위치 정보 받아오기 시작
+            let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: self.locationManager.location?.coordinate.latitude ?? 0, lng: self.locationManager.location?.coordinate.longitude ?? 0))
+            print("위도: \(self.locationManager.location?.coordinate.latitude)")
+            print("경도: \(self.locationManager.location?.coordinate.longitude)")
+            naver_map.moveCamera(cameraUpdate)
+        }
+        else {
+                    print("위치 서비스 Off 상태")
+            }
+        
+        naverSearchPlace(searchText: "장안동 짜장면")
+        
+        UIButton.animate(withDuration: 1, animations:{
             var i = 0
             sender.frame = CGRect(x: 0 , y: 0, width: self.screen_width, height: self.screen_width)
             while (i < 4)
             {
                 if (self.food_btns[i] != sender)
                 {
-                    UIButton.animate(withDuration: 1, animations:{
                         self.food_btns[i].isHidden = true
                         self.food_btns[i].isEnabled = false
                         
                         self.choiced_btn?.isHidden = true
                         self.choiced_btn?.isEnabled = false
-                    })
                 }
                 i += 1
             }
         })
+
+        UIView.animate(withDuration: 1, animations:{
+            self.food_inform_view.frame.origin = CGPoint(x: 0, y: self.screen_height * 0.48)
+        })
+        
+    }
+
+    var searchedPlaces : String!
+    var searchedLatitude : String!
+    var searchedLongitude : String!
+
+    func naverSearchPlace(searchText : String) {
+            
+            let encodeAddress = searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+                    
+            let header1 = HTTPHeader(name: "X-Naver-Client-Id", value: "MtquRJ3FZdTiwZ9Cqpgw")
+            let header2 = HTTPHeader(name: "X-Naver-Client-Secret", value: "CHzkas7dAr")
+            let headers = HTTPHeaders([header1,header2])
+            
+            AF.request("https://openapi.naver.com/v1/search/local.json?query=" + encodeAddress + "&display=5", method: .get,headers: headers).validate()
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let value as [String:Any]):
+                        let json = JSON(value)
+                        print(json)
+                        let data = json["items"]
+                        var i = 0
+                        while (i < 5)
+                        {
+                            self.make_marker( data: data, i: i)
+                            i += 1
+                        }
+                    case .failure(let error):
+                        print(error.errorDescription ?? "")
+                    default :
+                        fatalError()
+                    }
+                }
+    }
+    // 출처 : https://github.com/xio9971/NaverSearchPlaceEx/blob/master/NaverMapEx/ViewController.swift
+    /*
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+            if let location = locations.first {
+                print("위도: \(location.coordinate.latitude)")
+                print("경도: \(location.coordinate.longitude)")
+                
+                let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude))
+                naver_map.moveCamera(cameraUpdate)
+            }
+    }
+    */
+    func make_marker( data: JSON, i : Int)
+    {
+        let food_lat = data[i]["mapy"].doubleValue
+        let food_lon = data[i]["mapx"].doubleValue
+        let marker = NMFMarker()
+        marker.position = NMGLatLng(lat: food_lat, lng: food_lon)
+        marker.mapView = self.naver_map
+        print("x : \(food_lat) y :  \(food_lon) ")
     }
 }
-

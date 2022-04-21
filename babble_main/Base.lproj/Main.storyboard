@@ -60,6 +60,30 @@
                                     <action selector="btn_choice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XNm-go-JXM"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JbF-44-SXn">
+                                <rect key="frame" x="0.0" y="436" width="414" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbu-TY-Za2">
+                                        <rect key="frame" x="8" y="8" width="162" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="좋아요"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ls9-XM-FKT">
+                                        <rect key="frame" x="244" y="8" width="162" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="싫어요"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s0K-R1-ogO">
+                                        <rect key="frame" x="8" y="88" width="398" height="338"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,8 +93,10 @@
                         <outlet property="babble_btn_2" destination="OAZ-Uf-hWz" id="nhD-z1-avU"/>
                         <outlet property="babble_btn_3" destination="5w1-FW-BOm" id="Vel-CZ-cMy"/>
                         <outlet property="babble_btn_4" destination="Ig1-kU-92V" id="ayU-aI-beh"/>
+                        <outlet property="food_inform_view" destination="JbF-44-SXn" id="9Zk-Qt-UUD"/>
                         <outlet property="img_view" destination="CUE-6y-3rA" id="rGs-uy-M5W"/>
                         <outlet property="main_view" destination="8bC-Xf-vdC" id="kgI-Nd-jkZ"/>
+                        <outlet property="map_view" destination="s0K-R1-ogO" id="jns-2H-s0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
